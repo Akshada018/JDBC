@@ -14,10 +14,6 @@ public class Jdbc1 {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc", "root", "12345");
 			smt = con.createStatement();
-			/* int data = smt.executeUpdate("insert into employee values(107,'Ankita Shinde',20000)");
-			if (data > 0) {
-				System.out.println("Data inserted successfully.");
-			}*/
 			System.out.println("EmpId \t\t EmpName \t\t Salary");
 			ResultSet rs = smt.executeQuery("select * from employee");
 			while(rs.next())
